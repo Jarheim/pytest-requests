@@ -14,3 +14,8 @@ def get_pet(petId, status_code=200):
 def add_pet(pet_request=PetRequest, status_code=200):
     url = endpoint.v2.add_pet
     return restClient.post(url, object=pet_request, status_code=status_code)
+
+
+def add_pet_simple(json, status_code=200):
+    url = endpoint.v2.add_pet
+    return restClient.post(url, json=json, status_code=status_code)
